@@ -1,7 +1,3 @@
-finalGrade [], [] =
+finalGrade :: [Int] -> [Int] -> Int
+finalGrade grade weight = (sum (zipWith (*) grade weight)) `div` (sum (weight)) 
 
-finalGrade  [] = [[]]
-finalGrade  (x:xs) = let rec = calculate xs
-                       pos = map (x:) rec
-                       neg = map ((1 - x):) rec
-                   in pos ++ neg
